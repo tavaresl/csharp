@@ -664,23 +664,23 @@
     ]
   },
   "packageFolders": {
-    "/home/lucas/.nuget/packages/": {},
-    "/usr/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "/Users/lucasrocha/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/lucas/Projects/DotNetCore/myAoo/myAoo.csproj",
-      "projectName": "myAoo",
-      "projectPath": "/home/lucas/Projects/DotNetCore/myAoo/myAoo.csproj",
-      "packagesPath": "/home/lucas/.nuget/packages/",
-      "outputPath": "/home/lucas/Projects/DotNetCore/myAoo/obj/",
+      "projectUniqueName": "/Users/lucasrocha/Projects/csharp/CSharpCases.csproj",
+      "projectName": "CSharpCases",
+      "projectPath": "/Users/lucasrocha/Projects/csharp/CSharpCases.csproj",
+      "packagesPath": "/Users/lucasrocha/.nuget/packages/",
+      "outputPath": "/Users/lucasrocha/Projects/csharp/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/share/dotnet/sdk/NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/home/lucas/.nuget/NuGet/NuGet.Config"
+        "/Users/lucasrocha/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -703,8 +703,9 @@
       "netcoreapp2.0": {
         "dependencies": {
           "Microsoft.NETCore.App": {
+            "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0",
             "autoReferenced": true
           }
         },

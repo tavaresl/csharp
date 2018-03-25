@@ -8,3 +8,14 @@
 /home/lucas/Projects/DotNetCore/myAoo/obj/Debug/netcoreapp2.0/myAoo.AssemblyInfo.cs
 /home/lucas/Projects/DotNetCore/myAoo/obj/Debug/netcoreapp2.0/myAoo.dll
 /home/lucas/Projects/DotNetCore/myAoo/obj/Debug/netcoreapp2.0/myAoo.pdb
+/Users/lucasrocha/Projects/csharp/bin/Debug/netcoreapp2.0/myAoo.deps.json
+/Users/lucasrocha/Projects/csharp/bin/Debug/netcoreapp2.0/myAoo.runtimeconfig.json
+/Users/lucasrocha/Projects/csharp/bin/Debug/netcoreapp2.0/myAoo.runtimeconfig.dev.json
+/Users/lucasrocha/Projects/csharp/bin/Debug/netcoreapp2.0/myAoo.dll
+/Users/lucasrocha/Projects/csharp/bin/Debug/netcoreapp2.0/myAoo.pdb
+/Users/lucasrocha/Projects/csharp/obj/Debug/netcoreapp2.0/myAoo.csprojResolveAssemblyReference.cache
+/Users/lucasrocha/Projects/csharp/obj/Debug/netcoreapp2.0/myAoo.csproj.CoreCompileInputs.cache
+/Users/lucasrocha/Projects/csharp/obj/Debug/netcoreapp2.0/myAoo.AssemblyInfoInputs.cache
+/Users/lucasrocha/Projects/csharp/obj/Debug/netcoreapp2.0/myAoo.AssemblyInfo.cs
+/Users/lucasrocha/Projects/csharp/obj/Debug/netcoreapp2.0/myAoo.dll
+/Users/lucasrocha/Projects/csharp/obj/Debug/netcoreapp2.0/myAoo.pdb

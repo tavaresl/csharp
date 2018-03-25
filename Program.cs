@@ -1,36 +1,36 @@
 ﻿using System;
-using Cases;
 using System.Linq;
+using Cases;
 
 namespace myAoo
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      var argument = args.Any() ? args[0] : readArgumentFromPrompt();
-      run(argument);
-    }
+        static void Main(string[] args)
+        {
+            var argument = args.Any() ? args[0] : ReadArgumentFromPrompt();
+            Run(argument);
+        }
 
-    private static string readArgumentFromPrompt()
-    {
-      Console.WriteLine("Which case would you like to run?");
-      return Console.ReadLine();
-    }
+        private static string ReadArgumentFromPrompt()
+        {
+            Console.WriteLine("Which case would you like to run?");
+            return Console.ReadLine();
+        }
 
-    private static void run(string cmd)
-    {
-      switch (cmd.ToLower())
-      {
-        case "fibonacci":
-        case "-fib":
-          Fibonacci.Run();
-          break;
+        private static void Run(string cmd)
+        {
+            switch (cmd.ToLower())
+            {
+                case "fibonacci":
+                case "-fib":
+                    new Fibonacci().Run();
+                    break;
 
-        default:
-          Console.WriteLine("Invalid argument");
-          break;
-      }
+                default:
+                    Console.WriteLine("Invalid argument");
+                    break;
+            }
+        }
     }
-  }
 }
