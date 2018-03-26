@@ -27,6 +27,11 @@ namespace myAoo
                     new Fibonacci().Run();
                     break;
 
+                case "list":
+                case "listexercises":
+                    new ListExercises().Run();
+                    break;
+
                 default:
                     Console.WriteLine("Invalid argument");
                     break;
