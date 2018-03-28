@@ -4,60 +4,67 @@ using Cases;
 
 namespace myAoo
 {
-  class Program
-  {
-    static void Main(string[] args)
+    class Program
     {
-      // var chapter = args.Any() ? args[0] : null;
-      // Run(chapter);
+        static void Main(string[] args)
+        {
+            // var chapter = args.Any() ? args[0] : null;
+            // Run(chapter);
 
-      if (args.Any())
-        Run(args[0]);
-      else
-        RunFromPrompt();
-    }
+            if (args.Any())
+                Run(args[0]);
+            else
+                RunFromPrompt();
+        }
 
-    private static void RunFromPrompt()
-    {
-      Console.WriteLine("Which chapter would you like to run?");
-      Console.WriteLine(@"
+        private static void RunFromPrompt()
+        {
+            Console.WriteLine("Which chapter would you like to run?");
+            Console.WriteLine(@"
         0 - Fibonacci
         1 - Arrays and Lists
+        2 - Text
       ");
 
-      string command;
-      int val;
+            string command;
+            int val;
 
-      do
-      {
-        command = Console.ReadLine();
-      }
-      while(!int.TryParse(command, out val));
+            do
+            {
+                command = Console.ReadLine();
+            }
+            while (!int.TryParse(command, out val));
 
-      Run(command);
+            Run(command);
+        }
+
+        private static void Run(string cmd)
+        {
+            switch (cmd.ToLower())
+            {
+                case "fibonacci":
+                case "-fib":
+                case "0":
+                    new Fibonacci().Run();
+                    return;
+
+                case "arrayandlists":
+                case "-aal":
+                case "1":
+                    new ArraysAndLists().Run();
+                    return;
+
+                case "text":
+                case "-txt":
+                case "2":
+                    new StringCase().Run();
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid argument");
+                    RunFromPrompt();
+                    return;
+            }
+        }
     }
-
-    private static void Run(string cmd)
-    {
-      switch (cmd.ToLower())
-      {
-        case "fibonacci":
-        case "-fib":
-        case "0":
-          new Fibonacci().Run();
-          return;
-
-        case "arrayandlists":
-        case "-aal":
-        case "1":
-          new ArraysAndLists().Run();
-          return;
-
-        default:
-          Console.WriteLine("Invalid argument");
-          RunFromPrompt();
-          return;
-      }
-    }
-  }
 }
