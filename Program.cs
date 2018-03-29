@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Text;
 using Cases;
 
 namespace myAoo
@@ -19,12 +20,15 @@ namespace myAoo
 
         private static void RunFromPrompt()
         {
-            Console.WriteLine("Which chapter would you like to run?");
-            Console.WriteLine(@"
-        0 - Fibonacci
-        1 - Arrays and Lists
-        2 - Text
-      ");
+			var header = new StringBuilder("Which chapter would you like to run?")
+				.AppendLine()
+				.AppendLine()
+				.Append("0 - Fibonacci\n")
+				.Append("1 - Arrays and Lists\n")
+				.Append("2 - Working with Texts")
+				.AppendLine();
+				
+            Console.WriteLine(header);
 
             string command;
             int val;

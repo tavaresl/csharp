@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Linq;
 
 namespace Cases
 {
@@ -43,10 +44,19 @@ namespace Cases
         public void IsConsecutive()
         {
             Console.Clear();
-            Console.WriteLine("Enter some numbers, separated by dash (-)");
+            var header = new StringBuilder("Check if numbers are consecutive")
+                .AppendLine()
+                .Append("Enter some numbers, separated by dash (-)");
+
+            Console.WriteLine(header);
 
             var typedNumbers = Console.ReadLine();
+            var numbers = typedNumbers.Split("-").Select(num => int.Parse(num)).ToArray();
 
+            foreach (var num in numbers)
+            {
+                Console.WriteLine("Number: " + num);   
+            }
         }
     }
 }
