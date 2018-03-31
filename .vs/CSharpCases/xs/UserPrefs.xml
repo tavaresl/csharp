@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{9D371AA2-6FEF-433E-B364-581F7041D83E}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="csharp Status">
     <Files>
-      <File FileName="Program.cs" Line="43" Column="34" />
-      <File FileName="Cases/ArraysAndLists.cs" Line="154" Column="53" />
-      <File FileName="Cases/StringCase.cs" Line="49" Column="13" />
+      <File FileName="Program.cs" Line="23" Column="54" />
+      <File FileName="Cases/ArraysAndListsExercises.cs" Line="172" Column="49" />
+      <File FileName="Domain/ArrayAndLists.cs" Line="28" Column="13" />
       <File FileName="csharp Status" />
     </Files>
   </MonoDevelop.Ide.Workbench>

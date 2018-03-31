@@ -16,7 +16,8 @@ namespace Cases
                 .Append("Choose an exercise")
                 .AppendLine()
                 .AppendLine()
-                .Append("1 - Check if numbers are consecutive")
+                .Append("1 - Check if numbers are consecutive\n")
+                .Append("2 - Check if there are duplicate numbers\n")
                 .AppendLine();
 
 
@@ -33,6 +34,10 @@ namespace Cases
             {
                 case "1":
                     IsConsecutive();
+                    break;
+
+                case "2":
+                    IsThereDuplicates();
                     break;
 
                 default:
@@ -53,9 +58,45 @@ namespace Cases
             var typedNumbers = Console.ReadLine();
             var numbers = typedNumbers.Split("-").Select(num => int.Parse(num)).ToArray();
 
-            foreach (var num in numbers)
+            for (var i = 0; i < numbers.Count() - 1; i++)
             {
-                Console.WriteLine("Number: " + num);   
+                if (!(Math.Abs(numbers[0] - numbers[1]) == 1))
+                {
+                    Console.WriteLine("Not consecutive");
+                    return;
+                }
+            }
+
+            Console.WriteLine("Consecutive");
+        }
+
+        public void IsThereDuplicates()
+        {
+            Console.Clear();
+
+            var header = new StringBuilder("Check if there are duplicate numbers")
+                .AppendLine()
+                .Append("Enter some numbers, separated by dash");
+            
+            Console.WriteLine(header);
+
+            var typped = Console.ReadLine();
+
+            if (String.IsNullOrEmpty(typped))
+                return;
+
+            var numbers = typped.Split('-');
+            string[] uniques = new string[numbers.Length];
+
+            for (var i = 0; i < numbers.Length; i++)
+            {
+                if (uniques.Contains(numbers[0]))
+                {
+                    Console.WriteLine("Duplicate");
+                    return;
+                }
+
+                uniques[i] = numbers[i];
             }
         }
     }

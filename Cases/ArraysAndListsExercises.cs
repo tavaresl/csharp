@@ -1,10 +1,12 @@
 using System;
 using System.Linq;
 using System.Collections.Generic;
+using CSharpCases.Domain;
+using System.Text;
 
 namespace Cases
 {
-    public class ArraysAndLists
+    public class ArraysAndListsExercises
     {
         const string QUIT = "quit";
 
@@ -42,13 +44,7 @@ namespace Cases
             Console.WriteLine("Enter your name:");
 
             var username = Console.ReadLine();
-            var nameLength = username.Length;
-            var chars = new char[nameLength];
-
-            for (var i = nameLength; i > 0; i--)
-                chars[nameLength - i] = username[i - 1];
-
-            var reversedName = new string(chars);
+			var reversedName = ArrayAndLists.Reverse(username);
 
             Console.WriteLine("\nYour reversed name: {0}", reversedName);
         }
@@ -117,6 +113,7 @@ namespace Cases
             Console.Clear();
             Console.WriteLine("Display the lowest three values in a group of five\n");
             Console.WriteLine("Enter 5 values, separeted by comma");
+
             while (true)
             {
                 var inputtedValues = Console.ReadLine();
@@ -128,12 +125,12 @@ namespace Cases
                     continue;
                 }
 
-                Array.Sort(values);
+                var smallestThree = ArrayAndLists.GetLowestValues(values);
 
                 Console.WriteLine("\nSmallest three values:");
 
-                for (int i = 0; i < 3; i++)
-                    Console.WriteLine(values[i]);
+                foreach (var value in smallestThree)
+                    Console.WriteLine(value);
 
                 break;
             }
@@ -141,15 +138,19 @@ namespace Cases
         public void Run()
         {
             Console.Clear();
-            Console.WriteLine("Arrays and Lists\n");
-            Console.WriteLine("Choose an exercise");
-            Console.WriteLine(@"
-        1 - Show your likers' names
-        2 - Show the reversed user's name
-        3 - Sort numbers in a list
-        4 - Show unique numbers in a set
-        5 - Display lowest three values
-      ");
+            var header = new StringBuilder("Arrays and Lists")
+                .AppendLine()
+                .AppendLine()
+                .Append("Choose and Exercise")
+                .AppendLine()
+                .AppendLine()
+                .Append("1 - Show your likers' names\n")
+                .Append("2 - Show the reversed user's name\n")
+                .Append("3 - Sort numbers in a list\n")
+                .Append("4 - Show unique numbers in a set\n")
+                .Append("5 - Display lowest three value\n");
+            
+            Console.WriteLine(header);
 
             var exerciseNumber = Console.ReadLine();
 

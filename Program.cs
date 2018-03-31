@@ -55,7 +55,7 @@ namespace myAoo
                 case "arrayandlists":
                 case "-aal":
                 case "1":
-                    new ArraysAndLists().Run();
+                    new ArraysAndListsExercises().Run();
                     return;
 
                 case "text":
